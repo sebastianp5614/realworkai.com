@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/RealWorkAI-1-07 - Copy.png" type="image/x-icon" />
+    
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    
+    <!-- 
+      Theme Sans Serif CSS
+      Remove the "disabled" attribute if you want to enable Sans Serif for headings.
+    -->
+    <link rel="stylesheet" href="./assets/css/theme-sans-serif.bundle.css" id="themeSansSerif" />
+    
+    <!--
+      Demo JS
+      Remove the code below on a production website.
+    -->
+    <script src="./assets/js/demo.bundle.js"></script>
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+    
+    <!-- Title -->
+    <title>Realworkai</title>
+    <style>
+      html {
+          scroll-behavior: smooth;
+      }
+      
+      /* Testimonial Cards Responsive Fix */
+      #testimonialsSlider .card-body {
+        min-height: auto !important;
+        padding-bottom: 2rem !important; /* Reduced from pb-9 for better flexibility */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      #testimonialsSlider blockquote {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem !important;
+      }
+      
+      #testimonialsSlider .card-body h4,
+      #testimonialsSlider .card-body p {
+        flex-shrink: 0;
+      }
+      
+      /* Ensure consistent spacing for different content lengths */
+      #testimonialsSlider blockquote q {
+        line-height: 1.6;
+        display: block;
+      }
+      
+      /* Flickity slider height adjustment for content changes */
+      .flickity-viewport {
+        transition: height 0.3s ease;
+      }
+      
+      /* Responsive adjustments for mobile */
+      @media (max-width: 768px) {
+        #testimonialsSlider .card-body {
+          padding-bottom: 1.5rem !important;
+        }
+        
+        #testimonialsSlider blockquote {
+          margin-bottom: 1rem !important;
+        }
+      }
+      
+  </style>
+  </head>
+  <body>
+
+    <!-- Language Toggle -->
+    <div id="language-toggle" class="position-fixed" style="top: 20px; right: 20px; z-index: 1060;">
+      <button id="lang-btn" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-2" onclick="toggleLanguage()">
+        <i class="fe fe-globe me-1"></i>
+        <span>Español</span>
+      </button>
+    </div>
+
+    
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-lg">
+    
+        <!-- Brand -->
+        
+        <a class="navbar-brand d-lg-none" href="./index.html">
+          <img src="./assets/img/avatars/RealWorkAI-1-07.png" alt="RealWorkAI Logo" style="height: 50px; width: 100px;">
+        </a>
+
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav justify-content-end w-100">
+            
+           
+          </ul>
+    
+          <!-- Brand -->
+          
+          <a class="navbar-brand d-none d-lg-block px-lg-6" href="./index.html">
+            <img src="./assets/img/avatars/RealWorkAI-1-07.png" alt="RealWorkAI Logo" style="height: 70px; width: 130px;">
+          </a>
+          
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav justify-content-start w-100">
+           
+          </ul>
+    
+        </div>
+    
+      </div>
+    </nav>
+    
+
+    
+
+    <!-- WELCOME -->
+    <section class="pt-6 pt-md-11 pb-8 pb-md-9">
+      <div class="container-lg">
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-xl-10 text-center">
+
+            <!-- Heading -->
+            <h1 class="font-sans-serif display-2 mb-4" data-translate="main-heading">
+              Creating <span class="text-primary">AI Agents</span> that do the real work <span class="text-underline-warning d-none d-xl-inline"><span data-typed='{"strings": ["Efficient", "Dynamic", "Responsive", "Innovative", "Next-gen", "Customized" ]}'></span></span><span class="text-underline-warning d-xl-none">Customized</span>.
+            </h1>
+
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 text-center">
+      
+              <!-- Text -->
+              <p class="lead text-muted" data-translate="main-subtext">
+                Helping Businesses Transition To AI
+              </p>
+      <!-- Buttons Row -->
+<div class="d-flex flex-column flex-md-row justify-content-center">
+  <a class="btn btn-primary lift ms-0 ms-md-3 mb-2 mb-md-0" href="https://calendly.com/help-realworkai/ai-agent-discovery-call" data-translate="book-call-btn">
+    Book a call
+</a>
+  <a class="btn btn-white lift ms-0 ms-md-3 mb-2 mb-md-0" href="#services" data-translate="our-services-btn">
+      Our services
+  </a>
+  <a class="btn btn-white lift ms-0 ms-md-3" href="#aia" data-translate="what-ai-agents-btn">
+      What are AI agents?
+  </a>
+</div>
+
+
+      
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+      <div class="shape shape-fluid-x shape-bottom text-white pb-18">
+        <div class="shape-img pb-9 pb-md-15">
+          <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 0h100v25H75L25 50H0z" fill="currentColor"/></svg>        </div>
+      </div>
+    </div>
+
+    <!-- TASKS -->
+    <section id="services" class="pt-10 pt-md-12 bg-dark">
+    
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Decoration -->
+            <div  class="position-absolute top-center top-md-start text-warning mt-n8 ms-md-n8">
+              <svg width="185" height="186" viewBox="0 0 185 186" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="currentColor"/><circle cx="22" cy="2" r="2" fill="currentColor"/><circle cx="42" cy="2" r="2" fill="currentColor"/><circle cx="62" cy="2" r="2" fill="currentColor"/><circle cx="82" cy="2" r="2" fill="currentColor"/><circle cx="102" cy="2" r="2" fill="currentColor"/><circle cx="122" cy="2" r="2" fill="currentColor"/><circle cx="142" cy="2" r="2" fill="currentColor"/><circle cx="162" cy="2" r="2" fill="currentColor"/><circle cx="182" cy="2" r="2" fill="currentColor"/><circle cx="2" cy="22" r="2" fill="currentColor"/><circle cx="22" cy="22" r="2" fill="currentColor"/><circle cx="42" cy="22" r="2" fill="currentColor"/><circle cx="62" cy="22" r="2" fill="currentColor"/><circle cx="82" cy="22" r="2" fill="currentColor"/><circle cx="102" cy="22" r="2" fill="currentColor"/><circle cx="122" cy="22" r="2" fill="currentColor"/><circle cx="142" cy="22" r="2" fill="currentColor"/><circle cx="162" cy="22" r="2" fill="currentColor"/><circle cx="182" cy="22" r="2" fill="currentColor"/><circle cx="2" cy="42" r="2" fill="currentColor"/><circle cx="22" cy="42" r="2" fill="currentColor"/><circle cx="42" cy="42" r="2" fill="currentColor"/><circle cx="62" cy="42" r="2" fill="currentColor"/><circle cx="82" cy="42" r="2" fill="currentColor"/><circle cx="102" cy="42" r="2" fill="currentColor"/><circle cx="122" cy="42" r="2" fill="currentColor"/><circle cx="142" cy="42" r="2" fill="currentColor"/><circle cx="162" cy="42" r="2" fill="currentColor"/><circle cx="182" cy="42" r="2" fill="currentColor"/><circle cx="2" cy="62" r="2" fill="currentColor"/><circle cx="22" cy="62" r="2" fill="currentColor"/><circle cx="42" cy="62" r="2" fill="currentColor"/><circle cx="62" cy="62" r="2" fill="currentColor"/><circle cx="82" cy="62" r="2" fill="currentColor"/><circle cx="102" cy="62" r="2" fill="currentColor"/><circle cx="122" cy="62" r="2" fill="currentColor"/><circle cx="142" cy="62" r="2" fill="currentColor"/><circle cx="162" cy="62" r="2" fill="currentColor"/><circle cx="182" cy="62" r="2" fill="currentColor"/><circle cx="2" cy="82" r="2" fill="currentColor"/><circle cx="22" cy="82" r="2" fill="currentColor"/><circle cx="42" cy="82" r="2" fill="currentColor"/><circle cx="62" cy="82" r="2" fill="currentColor"/><circle cx="82" cy="82" r="2" fill="currentColor"/><circle cx="102" cy="82" r="2" fill="currentColor"/><circle cx="122" cy="82" r="2" fill="currentColor"/><circle cx="142" cy="82" r="2" fill="currentColor"/><circle cx="162" cy="82" r="2" fill="currentColor"/><circle cx="182" cy="82" r="2" fill="currentColor"/><circle cx="2" cy="102" r="2" fill="currentColor"/><circle cx="22" cy="102" r="2" fill="currentColor"/><circle cx="42" cy="102" r="2" fill="currentColor"/><circle cx="62" cy="102" r="2" fill="currentColor"/><circle cx="82" cy="102" r="2" fill="currentColor"/><circle cx="102" cy="102" r="2" fill="currentColor"/><circle cx="122" cy="102" r="2" fill="currentColor"/><circle cx="142" cy="102" r="2" fill="currentColor"/><circle cx="162" cy="102" r="2" fill="currentColor"/><circle cx="182" cy="102" r="2" fill="currentColor"/><circle cx="2" cy="122" r="2" fill="currentColor"/><circle cx="22" cy="122" r="2" fill="currentColor"/><circle cx="42" cy="122" r="2" fill="currentColor"/><circle cx="62" cy="122" r="2" fill="currentColor"/><circle cx="82" cy="122" r="2" fill="currentColor"/><circle cx="102" cy="122" r="2" fill="currentColor"/><circle cx="122" cy="122" r="2" fill="currentColor"/><circle cx="142" cy="122" r="2" fill="currentColor"/><circle cx="162" cy="122" r="2" fill="currentColor"/><circle cx="182" cy="122" r="2" fill="currentColor"/><circle cx="2" cy="142" r="2" fill="currentColor"/><circle cx="22" cy="142" r="2" fill="currentColor"/><circle cx="42" cy="142" r="2" fill="currentColor"/><circle cx="62" cy="142" r="2" fill="currentColor"/><circle cx="82" cy="142" r="2" fill="currentColor"/><circle cx="102" cy="142" r="2" fill="currentColor"/><circle cx="122" cy="142" r="2" fill="currentColor"/><circle cx="142" cy="142" r="2" fill="currentColor"/><circle cx="162" cy="142" r="2" fill="currentColor"/><circle cx="182" cy="142" r="2" fill="currentColor"/><circle cx="2" cy="162" r="2" fill="currentColor"/><circle cx="22" cy="162" r="2" fill="currentColor"/><circle cx="42" cy="162" r="2" fill="currentColor"/><circle cx="62" cy="162" r="2" fill="currentColor"/><circle cx="82" cy="162" r="2" fill="currentColor"/><circle cx="102" cy="162" r="2" fill="currentColor"/><circle cx="122" cy="162" r="2" fill="currentColor"/><circle cx="142" cy="162" r="2" fill="currentColor"/><circle cx="162" cy="162" r="2" fill="currentColor"/><circle cx="182" cy="162" r="2" fill="currentColor"/><circle cx="2" cy="182" r="2" fill="currentColor"/><circle cx="22" cy="182" r="2" fill="currentColor"/><circle cx="42" cy="182" r="2" fill="currentColor"/><circle cx="62" cy="182" r="2" fill="currentColor"/><circle cx="82" cy="182" r="2" fill="currentColor"/><circle cx="102" cy="182" r="2" fill="currentColor"/><circle cx="122" cy="182" r="2" fill="currentColor"/><circle cx="142" cy="182" r="2" fill="currentColor"/><circle cx="162" cy="182" r="2" fill="currentColor"/><circle cx="182" cy="182" r="2" fill="currentColor"/></svg>            </div>
+
+            <!-- Stack -->
+            <div class="card-stack">
+
+              <!-- Card -->
+              <div class="card-stack-item mb-9">
+                <div class="card card-lg rounded overflow-hidden">
+                  <div class="row gx-0">
+                    <div class="col-md order-md-1 d-flex align-items-end bg-primary">
+
+                      <!-- Image -->
+                      <a href="./pricing-feature-listv.html">
+                        <img class="card-img-top" src="assets/img/screenshots/ui-elements/phone.jpg" alt="AI Voice Agents Interface">
+                      </a>
+
+                    </div>
+                    <div class="col-md-5 order-md-0 d-flex align-items-center bg-white">
+                      <div class="card-body text-center">
+
+                        <!-- Icon -->
+                        <div class="icon text-primary-light mx-auto mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M144.27,45.93a8,8,0,0,1,9.8-5.66,86.22,86.22,0,0,1,61.66,61.66,8,8,0,0,1-5.66,9.8A8.23,8.23,0,0,1,208,112a8,8,0,0,1-7.73-5.94,70.35,70.35,0,0,0-50.33-50.33A8,8,0,0,1,144.27,45.93Zm-2.33,41.8c13.79,3.68,22.65,12.54,26.33,26.33A8,8,0,0,0,176,120a8.23,8.23,0,0,0,2.07-.27,8,8,0,0,0,5.66-9.8c-5.12-19.16-18.5-32.54-37.66-37.66a8,8,0,1,0-4.13,15.46Zm81.94,95.35A56.26,56.26,0,0,1,168,232C88.6,232,24,167.4,24,88A56.26,56.26,0,0,1,72.92,32.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,109.39,104c-.18.27-.37.52-.57.77L88,129.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,223.88,183.08Zm-15.88-2s-.07,0-.11,0h0l-47-21.05-24.35,20.71a8.44,8.44,0,0,1-.74.56,16,16,0,0,1-15.75,1.14c-18.73-9.05-37.4-27.58-46.46-46.11a16,16,0,0,1,1-15.7,6.13,6.13,0,0,1,.57-.77L96,95.15l-21-47a.61.61,0,0,1,0-.12A40.2,40.2,0,0,0,40,88,128.14,128.14,0,0,0,168,216,40.21,40.21,0,0,0,208,181.07Z"></path></svg> </div>
+                        <!-- Heading -->
+                        <h1 class="font-sans-serif mb-4 mt-auto" data-translate="ai-voice-agents-title">
+                          AI Voice Agents
+                        </h1>
+
+                        <!-- Text -->
+                        <p data-translate="ai-voice-agents-desc">
+                          Next-Level AI Agents for Automated Inbound and Outbound Calls.
+                        </p>
+
+                        <!-- Link -->
+                        <a class="h6 text-uppercase text-decoration-none mt-auto" href="./pricing-feature-listv.html" data-translate="ai-voice-agents-link">
+                          Get started <i class="fe fe-arrow-right"></i>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card-stack-item mb-9">
+                <div class="card card-lg rounded overflow-hidden">
+                  <div class="row gx-0">
+                    <div class="col-md order-md-1 d-flex align-items-end bg-primary">
+
+                      <!-- Image -->
+                      <a href="./pricing-feature-listc.html">
+                        <img class="card-img-top" src="assets/img/screenshots/ui-elements/chatbot.jpg" alt="AI Text Chatbots Interface">
+                      </a>
+
+                    </div>
+                    <div class="col-md-5 order-md-0 d-flex align-items-center bg-white">
+                      <div class="card-body text-center">
+
+                        <!-- Icon -->
+                        <div class="icon text-primary-light mx-auto mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path></svg> </div>
+                        <!-- Heading -->
+                        <h1 class="font-sans-serif mb-4 mt-auto" data-translate="ai-text-chatbots-title">
+                          AI Text Chatbots
+                        </h1>
+
+                        <!-- Text -->
+                        <p data-translate="ai-text-chatbots-desc">
+                          AI Text Agents for your Website, Social Media, Emails, SMS 
+                        </p>
+
+                        <!-- Link -->
+                        <a class="h6 text-uppercase text-decoration-none mt-auto" href="./pricing-feature-listc.html" data-translate="ai-text-chatbots-link">
+                          Get started <i class="fe fe-arrow-right"></i>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card-stack-item mb-9">
+                <div class="card card-lg rounded overflow-hidden">
+                  <div class="row gx-0">
+                    <div class="col-md order-md-1 d-flex align-items-end bg-primary">
+
+                      <!-- Image -->
+                      <a href="./pricing-feature-lists.html">
+                        <img class="card-img-top" src="assets/img/screenshots/ui-elements/support.jpg" alt="Support and Maintenance Interface">
+                      </a>
+
+                    </div>
+                    <div class="col-md-5 order-md-0 d-flex align-items-center bg-white">
+                      <div class="card-body text-center">
+
+                        <!-- Icon -->
+                        <div class="icon text-primary-light mx-auto mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88.12,88.12,0,0,1,190.54,65.93,87.39,87.39,0,0,1,215.65,120H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h24a24,24,0,0,1-24,24H136a8,8,0,0,0,0,16h56a40,40,0,0,0,40-40V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm128,56a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24v56Z"></path></svg> </div>
+                        <!-- Heading -->
+                        <h1 class="font-sans-serif mb-4 mt-auto" data-translate="support-maintenance-title">
+                          Support and Maintenance
+                        </h1>
+
+                        <!-- Text -->
+                        <p data-translate="support-maintenance-desc">
+                          Regular updates, performance boosts, and fixes to keep your agents running smoothly.                        
+                        </p>
+
+                        <!-- Link -->
+                        <a class="h6 text-uppercase text-decoration-none mt-auto" href="./pricing-feature-lists.html" data-translate="support-maintenance-link">
+                          Get started <i class="fe fe-arrow-right"></i>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>      
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="aia" class="pt-10 pt-md-12 pb-9 pb-md-11 bg-dark">
+      <div class="container-lg">
+        <div class="row justify-content-center mt-n8">
+          <div class="col-md-6 px-lg-9 border-end border-0 border-md-1 border-gray-900">
+
+            <!-- Blockquote -->
+            <blockquote class="mt-8">
+
+              <!-- Logo -->
+              <p class="d-flex align-items-center justify-content-center mb-3 mb-md-5" style="font-size: 32px; line-height: 1;">
+                <span class="family-logo family-logo-sans-serif font-sans-serif" id="text-aa-sans-serif" data-translate="what-are-ai-agents-title">What are AI Agents?</span>
+              </p>
+
+              <!-- Text -->
+              <p class="lead text-center text-white mb-5 mb-md-8" data-translate="what-are-ai-agents-desc">
+                AI agents are like digital employees, capable of handling tasks autonomously to drive business growth. Examples include AI phone agents that can handle call inquiries, website chatbots for customer support, and email agents for sales and support. These agents interact with stakeholders, providing efficient and scalable solutions to enhance business operations.              
+              </p>
+
+              <!-- Footer -->
+              <div class="text-center">
+
+              
+
+              </div>
+
+            </blockquote>
+
+          </div>
+          <div class="col-md-6 px-lg-9">
+
+            <!-- Blockquote -->
+            <blockquote class="mt-8">
+
+              <!-- Logo -->
+              <p class="d-flex align-items-center justify-content-center mb-3 mb-md-5" style="font-size: 32px; line-height: 1;">
+                <span class="family-logo family-logo-sans-serif font-sans-serif" id="text-aa-sans-serif" data-translate="unsure-ai-title">Unsure how AI could be used in your business?</span>
+              </p>
+
+              <!-- Text -->
+              <p class="lead text-center text-white mb-5 mb-md-8" data-translate="unsure-ai-desc">
+                Curious about how AI can enhance your business? Book a 30-minute consultation with our team at realworkai.com. In your session, we'll show you how our AI solutions have driven success for businesses like yours, providing valuable insights to help you make an informed decision on your AI journey.              
+              </p>
+
+              <!-- Footer -->
+              <div class="text-center">
+                <a class="btn btn-primary lift ms-0 ms-md-3 mb-2 mb-md-0" href="https://calendly.com/help-realworkai/ai-agent-discovery-call" data-translate="book-consultation-btn">
+                  Book a consultation
+              </a>
+              </div>
+
+            </blockquote>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+      <div class="shape shape-fluid-x shape-bottom text-dark">
+        <div class="shape-img pb-8 pb-md-11">
+          <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 0h100v50H75L25 25H0z" fill="currentColor"/></svg>        </div>
+      </div>
+    </div>
+
+    <section class="pt-9 pt-md-11">
+      <div class="container-lg">
+        <div class="row align-items-center mb-6">
+          <div class="col-md">
+
+            <!-- Heading -->
+            <h1 class="font-sans-serif mb-0" data-translate="impactful-benefits-title">
+              Impactful Benefits for Your Success
+            </h1>
+
+           
+          </div>
+          <div class="col-md-auto">
+
+            <!-- Button -->
+            <a class="btn btn-primary lift ms-0 ms-md-3 mb-2 mb-md-0" href="https://calendly.com/help-realworkai/ai-agent-discovery-call" data-translate="book-call-btn">
+              Book a call
+          </a>
+
+          </div>
+        </div>
+       
+      </div>
+     
+   </section>
+
+  <section class="pt-10 pt-md-12">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-flush table-features mb-0" id="tableFeatures">
+              <tbody>
+                <tr>
+                  <th class="d-flex align-items-center">
+
+              
+
+                    <div class="ms-md-2">
+
+                      <!-- Title -->
+                      <p class="fs-lg fw-bold text-nowrap mb-0" data-translate="why-choose-us-title">
+                        Why Choose Us?
+                      </p>
+
+                    
+
+                    </div>
+
+                  </th>
+              
+                   
+                    <th class="text-center">
+                      <!-- Logo -->
+                      <img src="./assets/favicon/RealWorkAI-1-07 - Copy.png" alt="Logo" style="max-width: 90px; max-height: 30px;">
+                  </th>
+                  
+               
+                  <th class="text-center">
+
+                    <!-- Title -->
+                    <p class="fw-bold mb-0" data-translate="other-agencies">
+                      Other Development Agencies
+                    </p>
+
+                    
+
+                  </th>
+                </tr>
+                <tr>
+                  <td data-translate="experienced-developers">
+                    Experienced AI Developers
+                  </td>
+                  <td class="text-center">
+                    <span class="text-primary">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M18 7.714l-8.25 8.571L6 12.389" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>                      </span>
+                  </td>
+                  <td class="text-center">
+                    -
+                  </td>
+                </tr>
+                <tr>
+                  <td data-translate="innovative-practices">
+                    Innovative Development Practices
+                  </td>
+                  <td class="text-center">
+                    <span class="text-primary">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M18 7.714l-8.25 8.571L6 12.389" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>                      </span>
+                  </td>
+                  <td class="text-center">
+                    -
+                  </td>
+                </tr>
+                <tr>
+                  <td data-translate="custom-development">
+                    Complete Custom Development
+                  </td>
+                  <td class="text-center">
+                    <span class="text-primary">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M18 7.714l-8.25 8.571L6 12.389" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>                      </span>
+                  </td>
+                  <td class="text-center">
+                    -
+                  </td>
+                </tr>
+                <tr>
+                  <td data-translate="client-centric">
+                    Client-Centric Approach
+                  </td>
+                  <td class="text-center">
+                    <span class="text-primary">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M18 7.714l-8.25 8.571L6 12.389" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>                      </span>
+                  </td>
+                  <td class="text-center">
+                    -
+                  </td>
+                </tr>
+                <tr>
+                  <td data-translate="rigorous-testing">
+                    Rigorous Testing and Validation
+                  </td>
+                  <td class="text-center">
+                    <span class="text-primary">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M18 7.714l-8.25 8.571L6 12.389" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>                      </span>
+                  </td>
+                  <td class="text-center">
+                    -
+                  </td>
+                </tr>
+                <tr>
+                  <td data-translate="leading-partnerships">
+                    Partners With Leading AI Platforms
+                  </td>
+                  <td class="text-center">
+                    <span class="text-primary">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M18 7.714l-8.25 8.571L6 12.389" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>                      </span>
+                  </td>
+                  <td class="text-center">
+                    -
+                  </td>
+                </tr>
+               
+              
+              
+                
+               
+              </tbody>
+              
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class=" pt-10 pt-md-12 pb-9 pb-md-11">
+    <div class="container-lg">
+      
+    </div>
+  </section>
+
+  
+ 
+
+ <!-- PRICING -->
+ <section class="py-10 py-md-12 bg-dark">
+  <div class="container-lg">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-7 col-xl-6 text-center">
+ 
+
+        <!-- Heading -->
+        <h2 class="font-sans-serif display-4 text-white mb-4" data-translate="our-services-section-title">
+          Our services
+        </h2>
+
+        <!-- Text -->
+        <p class="text-white-80 mb-9" data-translate="our-services-section-desc">
+          Tailored AI Services Specifically Designed to Drive Sustainable Growth, Enhance Operational Efficiency, and Empower Your Business to Achieve Lasting Success in a Competitive Market.      
+        </p>
+
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5 col-xl-4">
+
+        <!-- Card -->
+        <div class="card rounded-top-start-3 rounded-bottom-end-3 mb-6">
+          <div class="card-body text-center">
+
+            <!-- Preheading -->
+            <h3 class="font-sans-serif text-uppercase text-warning" data-translate="ai-text-chatbots-package">
+              AI Text Chatbots
+            </h3>
+            <!-- Preheading -->
+            <h3 class="font-sans-serif text-uppercase" data-translate="chatbots-setup-fee">
+              setup fee
+            </h3>
+
+            <!-- Price -->
+            <p class="display-4 fw-bold" data-translate="chatbots-price">
+             
+              <span class="fs-3 align-middle">$</span>
+              <span class="mx-n2">2,000</span>
+            </p>
+           
+
+            <!-- List -->
+            <ul class="list-checked list-checked-warning">
+              <li style="text-decoration: underline;" data-translate="chatbots-website-social">
+                Website/Social Media
+              </li>
+               <li data-translate="chatbots-engagement">
+                Next-Level Customer Engagement
+               </li>
+               <li data-translate="chatbots-automations">
+                Advanced Automations
+               </li>
+              <li data-translate="chatbots-testing">
+                Rigorous Testing
+              </li>
+              <li data-translate="chatbots-support">
+                24/7 Priority Support
+              </li>
+              <li data-translate="chatbots-integrations">
+                Social Media Integrations
+              </li>
+              <li data-translate="chatbots-ai-models">
+                Latest AI Models
+              </li>
+            </ul>
+
+            <!-- Button -->
+            <a class="btn w-100 btn-primary lift" href="https://calendly.com/help-realworkai/ai-agent-discovery-call" data-translate="ai-voice-agents-link">
+              Get Started
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-lg-5 col-xl-4">
+
+        <!-- Card -->
+        <div class="card rounded-top-start-3 rounded-bottom-end-3">
+          <div class="card-body text-center">
+
+             <!-- Preheading -->
+             <h3 class="font-sans-serif text-uppercase text-warning" data-translate="ai-voice-agents-package">
+              AI Voice Agents
+            </h3>
+            <!-- Preheading -->
+            <h3 class="font-sans-serif text-uppercase" data-translate="voice-setup-fee">
+              setup fee
+            </h3>
+
+            <!-- Price -->
+            <p class="display-4 fw-bold" data-translate="voice-price">
+             
+              <span class="fs-3 align-middle">$</span>
+              <span class="mx-n2">3,000</span>
+            </p>
+            <!-- List -->
+            <ul class="list-checked list-checked-warning">
+              <li style="text-decoration: underline;" data-translate="voice-calls">
+                Inbound & Outbound Calls
+              </li>
+              <li data-translate="voice-automate">
+                Fully automate your phone calls
+              </li>
+              <li data-translate="voice-automations">
+                Advanced Automations
+              </li>
+              <li data-translate="voice-quality">
+                Human-Like Quality
+              </li>
+              <li data-translate="voice-support">
+                24/7 Priority Support
+              </li>
+              <li data-translate="voice-development">
+                Weekly Development Calls
+              </li>
+              <li data-translate="voice-testing">
+                Rigorous Testing
+              </li>
+              <li data-translate="voice-ai-models">
+                Latest AI Models
+              </li>
+            </ul>
+
+            <!-- Button -->
+            <a class="btn w-100 btn-primary lift" href="https://calendly.com/help-realworkai/ai-agent-discovery-call" data-translate="ai-voice-agents-link">
+              Get Started
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- CONTENT -->
+   <section class="pt-10 pt-md-12">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col">
+
+          <!-- Divider -->
+          <hr class="hr-sm bg-warning mx-auto mb-10 mb-md-12">
+
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-md-4">
+
+          <!-- Header -->
+          <div class="position-sticky mb-8" style="top: calc(108px + 2rem);">
+
+            <!-- Heading -->
+            <h1 class="font-sans-serif mb-4" data-translate="faq-title">
+              Frequently Asked Questions
+            </h1>
+
+          
+
+          </div>
+
+        </div>
+        <div class="col-md-7">
+
+          <!-- List group -->
+          <div class="list-group list-group-lg list-group-flush mt-n7 mb-9" id="faqData">
+           
+            <div class="list-group-item">
+
+              <!-- Heading -->
+              <a class="collapse-toggle fs-lg fw-bold text-decoration-none text-reset" data-bs-toggle="collapse" href="#faqDataOne" role="button" aria-expanded="false" aria-controls="faqDataTwo" data-translate="faq-1-q">
+                What types of AI Agents do you offer?
+              </a>
+
+              <!-- Collapse -->
+              <div class="collapse" id="faqDataOne" data-bs-parent="#faqData">
+                <p class="mt-2 mb-0" data-translate="faq-1-a">
+                  We provide two types of AI Agents. AI Voice Agents and AI Text Chatbots.  
+                </p>
+              </div>
+
+            </div>
+            <div class="list-group-item">
+
+              <!-- Heading -->
+              <a class="collapse-toggle fs-lg fw-bold text-decoration-none text-reset" data-bs-toggle="collapse" href="#faqDataTwo" role="button" aria-expanded="false" aria-controls="faqDataTwo" data-translate="faq-2-q">
+                How do you ensure the quality of your projects?
+              </a>
+
+              <!-- Collapse -->
+              <div class="collapse" id="faqDataTwo" data-bs-parent="#faqData">
+                <p class="mt-2 mb-0" data-translate="faq-2-a">
+                  We have a minimum 2 week testing period for our AI Agents. Our packages range from 2 weeks of testing to 6 weeks of testing.                 
+                </p>
+              </div>
+
+            </div>
+            <div class="list-group-item">
+
+              <!-- Heading -->
+              <a class="collapse-toggle fs-lg fw-bold text-decoration-none text-reset" data-bs-toggle="collapse" href="#faqDataThree" role="button" aria-expanded="false" aria-controls="faqDataThree" data-translate="faq-3-q">
+                What is your development process like?              
+              </a>
+
+              <!-- Collapse -->
+              <div class="collapse" id="faqDataThree" data-bs-parent="#faqData">
+                <p class="mt-2 mb-0" data-translate="faq-3-a">
+                  Our process involves initial consultation, planning, design, development, testing, and deployment. We follow agile methodologies to ensure flexibility and responsiveness.                
+                </p>
+              </div>
+
+            </div>
+            <div class="list-group-item">
+
+              <!-- Heading -->
+              <a class="collapse-toggle fs-lg fw-bold text-decoration-none text-reset" data-bs-toggle="collapse" href="#faqDataFour" role="button" aria-expanded="false" aria-controls="faqDataFour" data-translate="faq-4-q">
+                How do you handle project timelines?              
+              </a>
+
+              <!-- Collapse -->
+              <div class="collapse" id="faqDataFour" data-bs-parent="#faqData">
+                <p class="mt-2 mb-0" data-translate="faq-4-a">
+                  We create detailed project timelines with clear milestones. Our project deadlines are met by coordinating all phases of the development process.                
+                </p>
+              </div>
+
+            </div>
+            <div class="list-group-item">
+
+              <!-- Heading -->
+              <a class="collapse-toggle fs-lg fw-bold text-decoration-none text-reset" data-bs-toggle="collapse" href="#faqDataFive" role="button" aria-expanded="false" aria-controls="faqDataFour" data-translate="faq-5-q">
+                How often will I receive updates on the project?            
+              </a>
+
+              <!-- Collapse -->
+              <div class="collapse" id="faqDataFive" data-bs-parent="#faqData">
+                <p class="mt-2 mb-0" data-translate="faq-5-a">
+                  We will have at least 1 call per week to discuss the status of the project during its development and testing phase. 
+                </p>             
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row justify-content-between">
+       
+        
+      </div>
+      
+    </div>
+  </section>
+  
+
+    <!-- ABOUT -->
+    <section class="bg-light pt-12 pt-md-16">
+      
+      <div class="container-lg">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-5">
+
+            
+
+            <!-- Card -->
+            <div class="position-relative">
+
+              <!-- Decoration -->
+              <div class="position-absolute top-center top-md-start text-warning mt-n9 ms-md-n9">
+                <svg width="278" height="278" viewBox="0 0 278 278" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3 0h2v8H3z"/><path fill="currentColor" d="M0 3h8v2H0zM33 0h2v8h-2z"/><path fill="currentColor" d="M30 3h8v2h-8zM63 0h2v8h-2z"/><path fill="currentColor" d="M60 3h8v2h-8zM93 0h2v8h-2z"/><path fill="currentColor" d="M90 3h8v2h-8zM123 0h2v8h-2z"/><path fill="currentColor" d="M120 3h8v2h-8zM153 0h2v8h-2z"/><path fill="currentColor" d="M150 3h8v2h-8zM183 0h2v8h-2z"/><path fill="currentColor" d="M180 3h8v2h-8zM213 0h2v8h-2z"/><path fill="currentColor" d="M210 3h8v2h-8zM243 0h2v8h-2z"/><path fill="currentColor" d="M240 3h8v2h-8zM273 0h2v8h-2z"/><path fill="currentColor" d="M270 3h8v2h-8zM3 30h2v8H3z"/><path fill="currentColor" d="M0 33h8v2H0zM33 30h2v8h-2z"/><path fill="currentColor" d="M30 33h8v2h-8zM63 30h2v8h-2z"/><path fill="currentColor" d="M60 33h8v2h-8zM93 30h2v8h-2z"/><path fill="currentColor" d="M90 33h8v2h-8zM123 30h2v8h-2z"/><path fill="currentColor" d="M120 33h8v2h-8zM153 30h2v8h-2z"/><path fill="currentColor" d="M150 33h8v2h-8zM183 30h2v8h-2z"/><path fill="currentColor" d="M180 33h8v2h-8zM213 30h2v8h-2z"/><path fill="currentColor" d="M210 33h8v2h-8zM243 30h2v8h-2z"/><path fill="currentColor" d="M240 33h8v2h-8zM273 30h2v8h-2z"/><path fill="currentColor" d="M270 33h8v2h-8zM3 60h2v8H3z"/><path fill="currentColor" d="M0 63h8v2H0zM33 60h2v8h-2z"/><path fill="currentColor" d="M30 63h8v2h-8zM63 60h2v8h-2z"/><path fill="currentColor" d="M60 63h8v2h-8zM93 60h2v8h-2z"/><path fill="currentColor" d="M90 63h8v2h-8zM123 60h2v8h-2z"/><path fill="currentColor" d="M120 63h8v2h-8zM153 60h2v8h-2z"/><path fill="currentColor" d="M150 63h8v2h-8zM183 60h2v8h-2z"/><path fill="currentColor" d="M180 63h8v2h-8zM213 60h2v8h-2z"/><path fill="currentColor" d="M210 63h8v2h-8zM243 60h2v8h-2z"/><path fill="currentColor" d="M240 63h8v2h-8zM273 60h2v8h-2z"/><path fill="currentColor" d="M270 63h8v2h-8zM3 90h2v8H3z"/><path fill="currentColor" d="M0 93h8v2H0zM33 90h2v8h-2z"/><path fill="currentColor" d="M30 93h8v2h-8zM63 90h2v8h-2z"/><path fill="currentColor" d="M60 93h8v2h-8zM93 90h2v8h-2z"/><path fill="currentColor" d="M90 93h8v2h-8zM123 90h2v8h-2z"/><path fill="currentColor" d="M120 93h8v2h-8zM153 90h2v8h-2z"/><path fill="currentColor" d="M150 93h8v2h-8zM183 90h2v8h-2z"/><path fill="currentColor" d="M180 93h8v2h-8zM213 90h2v8h-2z"/><path fill="currentColor" d="M210 93h8v2h-8zM243 90h2v8h-2z"/><path fill="currentColor" d="M240 93h8v2h-8zM273 90h2v8h-2z"/><path fill="currentColor" d="M270 93h8v2h-8zM3 120h2v8H3z"/><path fill="currentColor" d="M0 123h8v2H0zM33 120h2v8h-2z"/><path fill="currentColor" d="M30 123h8v2h-8zM63 120h2v8h-2z"/><path fill="currentColor" d="M60 123h8v2h-8zM93 120h2v8h-2z"/><path fill="currentColor" d="M90 123h8v2h-8zM123 120h2v8h-2z"/><path fill="currentColor" d="M120 123h8v2h-8zM153 120h2v8h-2z"/><path fill="currentColor" d="M150 123h8v2h-8zM183 120h2v8h-2z"/><path fill="currentColor" d="M180 123h8v2h-8zM213 120h2v8h-2z"/><path fill="currentColor" d="M210 123h8v2h-8zM243 120h2v8h-2z"/><path fill="currentColor" d="M240 123h8v2h-8zM273 120h2v8h-2z"/><path fill="currentColor" d="M270 123h8v2h-8zM3 150h2v8H3z"/><path fill="currentColor" d="M0 153h8v2H0zM33 150h2v8h-2z"/><path fill="currentColor" d="M30 153h8v2h-8zM63 150h2v8h-2z"/><path fill="currentColor" d="M60 153h8v2h-8zM93 150h2v8h-2z"/><path fill="currentColor" d="M90 153h8v2h-8zM123 150h2v8h-2z"/><path fill="currentColor" d="M120 153h8v2h-8zM153 150h2v8h-2z"/><path fill="currentColor" d="M150 153h8v2h-8zM183 150h2v8h-2z"/><path fill="currentColor" d="M180 153h8v2h-8zM213 150h2v8h-2z"/><path fill="currentColor" d="M210 153h8v2h-8zM243 150h2v8h-2z"/><path fill="currentColor" d="M240 153h8v2h-8zM273 150h2v8h-2z"/><path fill="currentColor" d="M270 153h8v2h-8zM3 180h2v8H3z"/><path fill="currentColor" d="M0 183h8v2H0zM33 180h2v8h-2z"/><path fill="currentColor" d="M30 183h8v2h-8zM63 180h2v8h-2z"/><path fill="currentColor" d="M60 183h8v2h-8zM93 180h2v8h-2z"/><path fill="currentColor" d="M90 183h8v2h-8zM123 180h2v8h-2z"/><path fill="currentColor" d="M120 183h8v2h-8zM153 180h2v8h-2z"/><path fill="currentColor" d="M150 183h8v2h-8zM183 180h2v8h-2z"/><path fill="currentColor" d="M180 183h8v2h-8zM213 180h2v8h-2z"/><path fill="currentColor" d="M210 183h8v2h-8zM243 180h2v8h-2z"/><path fill="currentColor" d="M240 183h8v2h-8zM273 180h2v8h-2z"/><path fill="currentColor" d="M270 183h8v2h-8zM3 210h2v8H3z"/><path fill="currentColor" d="M0 213h8v2H0zM33 210h2v8h-2z"/><path fill="currentColor" d="M30 213h8v2h-8zM63 210h2v8h-2z"/><path fill="currentColor" d="M60 213h8v2h-8zM93 210h2v8h-2z"/><path fill="currentColor" d="M90 213h8v2h-8zM123 210h2v8h-2z"/><path fill="currentColor" d="M120 213h8v2h-8zM153 210h2v8h-2z"/><path fill="currentColor" d="M150 213h8v2h-8zM183 210h2v8h-2z"/><path fill="currentColor" d="M180 213h8v2h-8zM213 210h2v8h-2z"/><path fill="currentColor" d="M210 213h8v2h-8zM243 210h2v8h-2z"/><path fill="currentColor" d="M240 213h8v2h-8zM273 210h2v8h-2z"/><path fill="currentColor" d="M270 213h8v2h-8zM3 240h2v8H3z"/><path fill="currentColor" d="M0 243h8v2H0zM33 240h2v8h-2z"/><path fill="currentColor" d="M30 243h8v2h-8zM63 240h2v8h-2z"/><path fill="currentColor" d="M60 243h8v2h-8zM93 240h2v8h-2z"/><path fill="currentColor" d="M90 243h8v2h-8zM123 240h2v8h-2z"/><path fill="currentColor" d="M120 243h8v2h-8zM153 240h2v8h-2z"/><path fill="currentColor" d="M150 243h8v2h-8zM183 240h2v8h-2z"/><path fill="currentColor" d="M180 243h8v2h-8zM213 240h2v8h-2z"/><path fill="currentColor" d="M210 243h8v2h-8zM243 240h2v8h-2z"/><path fill="currentColor" d="M240 243h8v2h-8zM273 240h2v8h-2z"/><path fill="currentColor" d="M270 243h8v2h-8zM3 270h2v8H3z"/><path fill="currentColor" d="M0 273h8v2H0zM33 270h2v8h-2z"/><path fill="currentColor" d="M30 273h8v2h-8zM63 270h2v8h-2z"/><path fill="currentColor" d="M60 273h8v2h-8zM93 270h2v8h-2z"/><path fill="currentColor" d="M90 273h8v2h-8zM123 270h2v8h-2z"/><path fill="currentColor" d="M120 273h8v2h-8zM153 270h2v8h-2z"/><path fill="currentColor" d="M150 273h8v2h-8zM183 270h2v8h-2z"/><path fill="currentColor" d="M180 273h8v2h-8zM213 270h2v8h-2z"/><path fill="currentColor" d="M210 273h8v2h-8zM243 270h2v8h-2z"/><path fill="currentColor" d="M240 273h8v2h-8zM273 270h2v8h-2z"/><path fill="currentColor" d="M270 273h8v2h-8z"/></svg>              </div>
+
+              <!-- Card -->
+              <div class="card card-sm rounded-top-start rounded-bottom-end mb-10 mb-md-0">
+
+                <!-- Slider -->
+                <div data-flickity='{"asNavFor": "#testimonialsSlider", "fade": true, "draggable": false, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "wrapAround": true}'>
+                  <img class="card-img-top rounded-top-start" src="assets/img/top-r/purple-r.png" alt="Customer Testimonial Background">
+                  <img class="card-img-top rounded-top-start" src="assets/img/top-r/purple-r.png" alt="Customer Testimonial Background">
+                  <img class="card-img-top rounded-top-start" src="assets/img/top-r/purple-r.png" alt="Customer Testimonial Background">
+                </div>
+
+                <!-- SHAPE -->
+                <div class="position-relative">
+                  <div class="shape shape-fluid-x shape-top text-white">
+                    <div class="shape-img pb-7">
+                      <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                        <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="mt-n11" data-flickity='{"asNavFor": "#testimonialsSlider", "fade": true, "draggable": false, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "wrapAround": true}'>
+                  <div class="card-body w-100 pb-0 text-center">
+                    <div class="avatar avatar-xl">
+                      <img class="avatar-img rounded-circle border border-5 border-white" src="assets/img/avatars/Havatar.jpg" alt="Customer Avatar">
+                    </div>
+                  </div>
+                  <div class="card-body w-100 pb-0 text-center">
+                    <div class="avatar avatar-xl">
+                      <img class="avatar-img rounded-circle border border-5 border-white" src="assets/img/avatars/Davatar.png" alt="Customer Avatar">
+                    </div>
+                  </div>
+                  <div class="card-body w-100 pb-0 text-center">
+                    <div class="avatar avatar-xl">
+                      <img class="avatar-img rounded-circle border border-5 border-white" src="assets/img/avatars/Pavatar.png" alt="Customer Avatar">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="flickity-soft-edges flickity-soft-edges-white flickity-buttons-adjacent flickity-buttons-rounded flickity-buttons-bottom-center rounded-inherit" data-flickity='{"pageDots": false, "wrapAround": true}' id="testimonialsSlider">
+                  <div class="card-body w-100 text-center">
+
+                    <!-- Blockquote -->
+                    <blockquote class="mb-5">
+                      <q class="fs-lg" data-translate="testimonial-1">
+                        realworkai.com has been a game changer for our garage door installation business. The chatbots handle after hours inquiries, schedule service calls, and provide quick estimates. Our leads have increased by 35%, and customers love the instant responses.
+                      </q>
+                    </blockquote>
+
+                    <!-- Heading -->
+                    <h4 class="font-sans-serif mb-0" data-translate="testimonial-1-company">Altone Overhead Doors</h4>
+
+                    <!-- Position -->
+                    <p class="fs-sm text-muted mt-n1 mb-0">realworkai.com customer</p>
+
+                  </div>
+                  <div class="card-body w-100 text-center">
+
+                    <!-- Blockquote -->
+                    <blockquote class="mb-5">
+                      <q class="fs-lg" data-translate="testimonial-2">
+                        AI voice agents have been a lifesaver for our daycare. They handle parent inquiries, schedule tours, and even provide updates on availability with a warm, professional tone. We've saved so much time, and parents love the quick, reliable responses!                      
+                      </q>
+                    </blockquote>
+
+                    <!-- Heading -->
+                    <h4 class="font-sans-serif mb-0" data-translate="testimonial-2-company">Little Sunrays Daycare</h4>
+
+                    <!-- Position -->
+                    <p class="fs-sm text-muted mt-n1 mb-0">realworkai.com customer</p>
+
+                  </div>
+                  <div class="card-body w-100 text-center">
+
+                    <!-- Blockquote -->
+                    <blockquote class="mb-5">
+                      <q class="fs-lg" data-translate="testimonial-3">
+                        With the AI voice agents handling appointment scheduling, reminders, and common inquiries, our staff can focus more on patient care.
+                      </q>
+                    </blockquote>
+
+                    <!-- Heading -->
+                    <h4 class="font-sans-serif mb-0" data-translate="testimonial-3-company">Dental Plus+</h4>
+
+                    <!-- Position -->
+                    <p class="fs-sm text-muted mt-n1 mb-0">realworkai.com customer</p>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-6 text-center text-md-start">
+
+            <!-- Heading -->
+            <h2 class="font-sans-serif display-4 mb-4" data-translate="testimonials-title">
+              Perfect reviews from our real customers.
+            </h2>
+
+            <!-- Text -->
+            <p class="text-muted" data-translate="testimonials-desc">
+              Discover why businesses trust realworkai.com to revolutionize customer interactions.            
+            </p>
+
+            <!-- List -->
+            <ul class="list-checked list-checked-warning mb-0">
+              <li data-translate="scalable-growth">Scalable for growth</li>
+              <li data-translate="perfect-reviews">Perfect 5-star reviews</li>
+              <li data-translate="boosted-engagement">Boosted Customer Engagement</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="bg-light pt-10 pt-md-12 pb-9 pb-md-11">
+      <div class="container-lg">
+        
+      </div>
+    </section>
+
+
+     
+    <!-- FOOTER -->
+    <footer class="footer py-8 py-md-11 bg-dark border-top border-gray-900">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-md-4">
+    
+            <!-- Brand -->
+            <img src="./assets/img/avatars/RealWorkAI-1-08.png" alt="Logo" style="max-width: 100px;">
+    
+                      <!-- Text -->
+          <p class="text-white-60" data-translate="footer-tagline">
+            Growth Powered by AI.
+          </p>
+    
+          </div>
+         
+          <div class="col-6 col-md">
+    
+          
+    
+          </div>
+          <div class="col-6 col-md">
+    
+           
+    
+          </div>
+          <div class="col-6 col-md">
+    
+            <!-- Heading -->
+            <h6 class="text-uppercase text-white mb-3 mb-md-5" data-translate="connect-title">
+              Connect
+            </h6>
+    
+            <!-- List -->
+            <ul class="list-unstyled">
+              
+              <li class="mb-3">
+                <a class="text-white-60" href="mailto:help@realworkai.com" style="text-decoration: underline;">
+                  help@realworkai.com
+              </a>              
+              </li>
+               <li class="mb-3">
+                <p class="text-white-60" data-translate="footer-copyright">
+                  © REALWORKAI 2023 - 2025, All rights reserved.
+              </p>              
+              </li>
+            </ul>
+    
+          </div>
+          <div class="col-12 col-md-auto">
+    
+            <!-- Social -->
+            <ul class="list-inline list-unstyled text-gray-600 mb-0">
+              <li class="list-inline-item">
+                <a class="icon icon-sm text-reset" href="https://www.instagram.com/realworkai/">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0V0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.163 12 18.163C15.403 18.163 18.162 15.404 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM18.406 4.155C17.61 4.155 16.965 4.8 16.965 5.595C16.965 6.39 17.61 7.035 18.406 7.035C19.201 7.035 19.845 6.39 19.845 5.595C19.845 4.8 19.201 4.155 18.406 4.155Z" fill="currentColor"></path>
+                  </svg>
+                </a>
+              </li>
+               <li class="list-inline-item">
+    <a class="icon icon-sm text-reset" href="https://www.youtube.com/channel/UCEKlJ9G6ADgzuNd0TZTfIjw" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.498 6.186a2.906 2.906 0 0 0-2.044-2.057C19.088 3.5 12 3.5 12 3.5s-7.088 0-9.454.629a2.906 2.906 0 0 0-2.044 2.057C0 8.562 0 12 0 12s0 3.438.502 5.814a2.906 2.906 0 0 0 2.044 2.057C4.912 20.5 12 20.5 12 20.5s7.088 0 9.454-.629a2.906 2.906 0 0 0 2.044-2.057C24 15.438 24 12 24 12s0-3.438-.502-5.814zM9.75 15.625V8.375L15.75 12l-6 3.625z" fill="currentColor"/>
+      </svg>
+    </a>
+  </li>
+              
+            </ul>
+    
+          </div>
+          
+        </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+    <!-- Language Translation Script -->
+    <script>
+      let currentLanguage = 'en';
+      
+      const translations = {
+        en: {
+          'lang-btn': 'Español',
+          'main-heading': 'Creating <span class="text-primary">AI Agents</span> that do the real work <span class="text-underline-warning d-none d-xl-inline"><span data-typed=\'{"strings": ["Efficient", "Dynamic", "Responsive", "Innovative", "Next-gen", "Customized" ]}\'></span></span><span class="text-underline-warning d-xl-none">Customized</span>.',
+          'main-subtext': 'Helping Businesses Transition To AI',
+          'book-call-btn': 'Book a call',
+          'our-services-btn': 'Our services',
+          'what-ai-agents-btn': 'What are AI agents?',
+          'ai-voice-agents-title': 'AI Voice Agents',
+          'ai-voice-agents-desc': 'Next-Level AI Agents for Automated Inbound and Outbound Calls.',
+          'ai-voice-agents-link': 'Get started',
+          'ai-text-chatbots-title': 'AI Text Chatbots',
+          'ai-text-chatbots-desc': 'AI Text Agents for your Website, Social Media, Emails, SMS',
+          'ai-text-chatbots-link': 'Get started',
+          'support-maintenance-title': 'Support and Maintenance',
+          'support-maintenance-desc': 'Regular updates, performance boosts, and fixes to keep your agents running smoothly.',
+          'support-maintenance-link': 'Get started',
+          'what-are-ai-agents-title': 'What are AI Agents?',
+          'what-are-ai-agents-desc': 'AI agents are like digital employees, capable of handling tasks autonomously to drive business growth. Examples include AI phone agents that can handle call inquiries, website chatbots for customer support, and email agents for sales and support. These agents interact with stakeholders, providing efficient and scalable solutions to enhance business operations.',
+          'unsure-ai-title': 'Unsure how AI could be used in your business?',
+          'unsure-ai-desc': 'Curious about how AI can enhance your business? Book a 30-minute consultation with our team at realworkai.com. In your session, we\'ll show you how our AI solutions have driven success for businesses like yours, providing valuable insights to help you make an informed decision on your AI journey.',
+          'book-consultation-btn': 'Book a consultation',
+          'impactful-benefits-title': 'Impactful Benefits for Your Success',
+          'why-choose-us-title': 'Why Choose Us?',
+          'other-agencies': 'Other Development Agencies',
+          'experienced-developers': 'Experienced AI Developers',
+          'innovative-practices': 'Innovative Development Practices',
+          'custom-development': 'Complete Custom Development',
+          'client-centric': 'Client-Centric Approach',
+          'rigorous-testing': 'Rigorous Testing and Validation',
+          'leading-partnerships': 'Partners With Leading AI Platforms',
+          'our-services-section-title': 'Our services',
+          'our-services-section-desc': 'Tailored AI Services Specifically Designed to Drive Sustainable Growth, Enhance Operational Efficiency, and Empower Your Business to Achieve Lasting Success in a Competitive Market.',
+          'ai-text-chatbots-package': 'AI Text Chatbots',
+          'chatbots-setup-fee': 'setup fee',
+          'chatbots-price': '$2,000',
+          'chatbots-website-social': 'Website/Social Media',
+          'chatbots-engagement': 'Next-Level Customer Engagement',
+          'chatbots-automations': 'Advanced Automations',
+          'chatbots-testing': 'Rigorous Testing',
+          'chatbots-support': '24/7 Priority Support',
+          'chatbots-integrations': 'Social Media Integrations',
+          'chatbots-ai-models': 'Latest AI Models',
+          'ai-voice-agents-package': 'AI Voice Agents',
+          'voice-setup-fee': 'setup fee',
+          'voice-price': '$3,000',
+          'voice-calls': 'Inbound & Outbound Calls',
+          'voice-automate': 'Fully automate your phone calls',
+          'voice-automations': 'Advanced Automations',
+          'voice-quality': 'Human-Like Quality',
+          'voice-support': '24/7 Priority Support',
+          'voice-development': 'Weekly Development Calls',
+          'voice-testing': 'Rigorous Testing',
+          'voice-ai-models': 'Latest AI Models',
+          'faq-title': 'Frequently Asked Questions',
+          'faq-1-q': 'What types of AI Agents do you offer?',
+          'faq-1-a': 'We provide two types of AI Agents. AI Voice Agents and AI Text Chatbots.',
+          'faq-2-q': 'How do you ensure the quality of your projects?',
+          'faq-2-a': 'We have a minimum 2 week testing period for our AI Agents. Our packages range from 2 weeks of testing to 6 weeks of testing.',
+          'faq-3-q': 'What is your development process like?',
+          'faq-3-a': 'Our process involves initial consultation, planning, design, development, testing, and deployment. We follow agile methodologies to ensure flexibility and responsiveness.',
+          'faq-4-q': 'How do you handle project timelines?',
+          'faq-4-a': 'We create detailed project timelines with clear milestones. Our project deadlines are met by coordinating all phases of the development process.',
+          'faq-5-q': 'How often will I receive updates on the project?',
+          'faq-5-a': 'We will have at least 1 call per week to discuss the status of the project during its development and testing phase.',
+          'testimonials-title': 'Perfect reviews from our real customers.',
+          'testimonials-desc': 'Discover why businesses trust realworkai.com to revolutionize customer interactions.',
+          'testimonial-1': 'realworkai.com has been a game changer for our garage door installation business. The chatbots handle after hours inquiries, schedule service calls, and provide quick estimates. Our leads have increased by 35%, and customers love the instant responses.',
+          'testimonial-1-company': 'Altone Overhead Doors',
+          'testimonial-2': 'AI voice agents have been a lifesaver for our daycare. They handle parent inquiries, schedule tours, and even provide updates on availability with a warm, professional tone. We\'ve saved so much time, and parents love the quick, reliable responses!',
+          'testimonial-2-company': 'Little Sunrays Daycare',
+          'testimonial-3': 'With the AI voice agents handling appointment scheduling, reminders, and common inquiries, our staff can focus more on patient care.',
+          'testimonial-3-company': 'Dental Plus+',
+          'scalable-growth': 'Scalable for growth',
+          'perfect-reviews': 'Perfect 5-star reviews',
+          'boosted-engagement': 'Boosted Customer Engagement',
+          'footer-tagline': 'Growth Powered by AI.',
+          'connect-title': 'Connect',
+          'footer-copyright': '© REALWORKAI 2023 - 2025, All rights reserved.'
+        },
+        es: {
+          'lang-btn': 'English',
+          'main-heading': 'Creando <span class="text-primary">Agentes de IA</span> que hacen el trabajo real <span class="text-underline-warning d-none d-xl-inline"><span data-typed=\'{"strings": ["Eficientes", "Dinámicos", "Responsivos", "Innovadores", "De última generación", "Personalizados" ]}\'></span></span><span class="text-underline-warning d-xl-none">Personalizados</span>.',
+          'main-subtext': 'Ayudando a las Empresas a Transicionar a la IA',
+          'book-call-btn': 'Programar una llamada',
+          'our-services-btn': 'Nuestros servicios',
+          'what-ai-agents-btn': '¿Qué son los agentes de IA?',
+          'ai-voice-agents-title': 'Agentes de Voz con IA',
+          'ai-voice-agents-desc': 'Agentes de IA de Próxima Generación para Llamadas Entrantes y Salientes Automatizadas.',
+          'ai-voice-agents-link': 'Comenzar',
+          'ai-text-chatbots-title': 'Chatbots de Texto con IA',
+          'ai-text-chatbots-desc': 'Agentes de Texto con IA para tu Sitio Web, Redes Sociales, Correos Electrónicos, SMS',
+          'ai-text-chatbots-link': 'Comenzar',
+          'support-maintenance-title': 'Soporte y Mantenimiento',
+          'support-maintenance-desc': 'Actualizaciones regulares, mejoras de rendimiento y correcciones para mantener tus agentes funcionando sin problemas.',
+          'support-maintenance-link': 'Comenzar',
+          'what-are-ai-agents-title': '¿Qué son los Agentes de IA?',
+          'what-are-ai-agents-desc': 'Los agentes de IA son como empleados digitales, capaces de manejar tareas de forma autónoma para impulsar el crecimiento empresarial. Los ejemplos incluyen agentes telefónicos de IA que pueden manejar consultas de llamadas, chatbots de sitios web para soporte al cliente y agentes de correo electrónico para ventas y soporte. Estos agentes interactúan con las partes interesadas, proporcionando soluciones eficientes y escalables para mejorar las operaciones comerciales.',
+          'unsure-ai-title': '¿No estás seguro de cómo se podría usar la IA en tu negocio?',
+          'unsure-ai-desc': '¿Tienes curiosidad sobre cómo la IA puede mejorar tu negocio? Programa una consulta de 30 minutos con nuestro equipo en realworkai.com. En tu sesión, te mostraremos cómo nuestras soluciones de IA han impulsado el éxito para empresas como la tuya, proporcionando información valiosa para ayudarte a tomar una decisión informada en tu viaje de IA.',
+          'book-consultation-btn': 'Programar una consulta',
+          'impactful-benefits-title': 'Beneficios Impactantes para tu Éxito',
+          'why-choose-us-title': '¿Por qué Elegirnos?',
+          'other-agencies': 'Otras Agencias de Desarrollo',
+          'experienced-developers': 'Desarrolladores de IA Experimentados',
+          'innovative-practices': 'Prácticas de Desarrollo Innovadoras',
+          'custom-development': 'Desarrollo Personalizado Completo',
+          'client-centric': 'Enfoque Centrado en el Cliente',
+          'rigorous-testing': 'Pruebas y Validación Rigurosas',
+          'leading-partnerships': 'Socios con Plataformas de IA Líderes',
+          'our-services-section-title': 'Nuestros servicios',
+          'our-services-section-desc': 'Servicios de IA Personalizados Específicamente Diseñados para Impulsar el Crecimiento Sostenible, Mejorar la Eficiencia Operacional y Empoderar a tu Negocio para Lograr un Éxito Duradero en un Mercado Competitivo.',
+          'ai-text-chatbots-package': 'Chatbots de Texto con IA',
+          'chatbots-setup-fee': 'tarifa de configuración',
+          'chatbots-price': '$2,000',
+          'chatbots-website-social': 'Sitio Web/Redes Sociales',
+          'chatbots-engagement': 'Compromiso del Cliente de Próximo Nivel',
+          'chatbots-automations': 'Automatizaciones Avanzadas',
+          'chatbots-testing': 'Pruebas Rigurosas',
+          'chatbots-support': 'Soporte Prioritario 24/7',
+          'chatbots-integrations': 'Integraciones de Redes Sociales',
+          'chatbots-ai-models': 'Últimos Modelos de IA',
+          'ai-voice-agents-package': 'Agentes de Voz con IA',
+          'voice-setup-fee': 'tarifa de configuración',
+          'voice-price': '$3,000',
+          'voice-calls': 'Llamadas Entrantes y Salientes',
+          'voice-automate': 'Automatiza completamente tus llamadas telefónicas',
+          'voice-automations': 'Automatizaciones Avanzadas',
+          'voice-quality': 'Calidad Humana',
+          'voice-support': 'Soporte Prioritario 24/7',
+          'voice-development': 'Llamadas de Desarrollo Semanales',
+          'voice-testing': 'Pruebas Rigurosas',
+          'voice-ai-models': 'Últimos Modelos de IA',
+          'faq-title': 'Preguntas Frecuentes',
+          'faq-1-q': '¿Qué tipos de Agentes de IA ofrecen?',
+          'faq-1-a': 'Proporcionamos dos tipos de Agentes de IA. Agentes de Voz con IA y Chatbots de Texto con IA.',
+          'faq-2-q': '¿Cómo garantizan la calidad de sus proyectos?',
+          'faq-2-a': 'Tenemos un período mínimo de pruebas de 2 semanas para nuestros Agentes de IA. Nuestros paquetes van de 2 semanas de pruebas a 6 semanas de pruebas.',
+          'faq-3-q': '¿Cómo es su proceso de desarrollo?',
+          'faq-3-a': 'Nuestro proceso involucra consulta inicial, planificación, diseño, desarrollo, pruebas y despliegue. Seguimos metodologías ágiles para garantizar flexibilidad y capacidad de respuesta.',
+          'faq-4-q': '¿Cómo manejan los cronogramas de proyectos?',
+          'faq-4-a': 'Creamos cronogramas de proyectos detallados con hitos claros. Nuestros plazos de proyecto se cumplen coordinando todas las fases del proceso de desarrollo.',
+          'faq-5-q': '¿Con qué frecuencia recibiré actualizaciones sobre el proyecto?',
+          'faq-5-a': 'Tendremos al menos 1 llamada por semana para discutir el estado del proyecto durante su fase de desarrollo y pruebas.',
+          'testimonials-title': 'Reseñas perfectas de nuestros clientes reales.',
+          'testimonials-desc': 'Descubre por qué las empresas confían en realworkai.com para revolucionar las interacciones con los clientes.',
+          'testimonial-1': 'realworkai.com ha sido un cambio radical para nuestro negocio de instalación de puertas de garaje. Los chatbots manejan consultas fuera del horario de oficina, programan llamadas de servicio y proporcionan estimaciones rápidas. Nuestros leads han aumentado un 35%, y a los clientes les encantan las respuestas instantáneas.',
+          'testimonial-1-company': 'Altone Overhead Doors',
+          'testimonial-2': 'Los agentes de voz con IA han sido un salvavidas para nuestra guardería. Manejan consultas de padres, programan tours e incluso proporcionan actualizaciones sobre disponibilidad con un tono cálido y profesional. ¡Hemos ahorrado mucho tiempo, y a los padres les encantan las respuestas rápidas y confiables!',
+          'testimonial-2-company': 'Little Sunrays Daycare',
+          'testimonial-3': 'Con los agentes de voz con IA manejando la programación de citas, recordatorios y consultas comunes, nuestro personal puede enfocarse más en la atención al paciente.',
+          'testimonial-3-company': 'Dental Plus+',
+          'scalable-growth': 'Escalable para el crecimiento',
+          'perfect-reviews': 'Reseñas perfectas de 5 estrellas',
+          'boosted-engagement': 'Compromiso del Cliente Mejorado',
+          'footer-tagline': 'Crecimiento Impulsado por IA.',
+          'connect-title': 'Conectar',
+          'footer-copyright': '© REALWORKAI 2023 - 2025, Todos los derechos reservados.'
+        }
+      };
+
+      function toggleLanguage() {
+        currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+        translatePage();
+      }
+
+      function translatePage() {
+        const langData = translations[currentLanguage];
+        
+        // Update button text
+        document.querySelector('#lang-btn span').textContent = langData['lang-btn'];
+        
+        // Update page content
+        for (const [key, value] of Object.entries(langData)) {
+          const elements = document.querySelectorAll(`[data-translate="${key}"]`);
+          elements.forEach(element => {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = value;
+            } else {
+              element.innerHTML = value;
+            }
+          });
+        }
+        
+        // Refresh Flickity slider after content changes to adjust to new text lengths
+        setTimeout(() => {
+          const slider = document.querySelector('#testimonialsSlider');
+          if (slider && window.Flickity) {
+            const flickityInstance = Flickity.data(slider);
+            if (flickityInstance) {
+              flickityInstance.resize();
+              flickityInstance.reposition();
+            }
+          }
+        }, 100);
+      }
+
+      // Initialize page
+      document.addEventListener('DOMContentLoaded', function() {
+        translatePage();
+      });
+    </script>
+
+  </body>
+</html>
