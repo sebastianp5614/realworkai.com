@@ -1,0 +1,4 @@
+﻿[submodule "realworkai.com"]
+    path = realworkai.com
+    url = https://github.com/sebastianp5614/realworkai.com.git
+    branch = main
