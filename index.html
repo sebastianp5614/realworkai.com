@@ -38,36 +38,10 @@
           scroll-behavior: smooth;
       }
       
-      /* Testimonial Slider: prevent text/button overlap and improve responsiveness */
-      #testimonialsSlider {
-        position: relative;
-        padding-bottom: 3.75rem; /* reserve space for bottom-centered nav buttons */
-      }
-
-      /* Reposition buttons to bottom-center within this slider only */
-      #testimonialsSlider.flickity-buttons-bottom-center .flickity-prev-next-button {
-        top: auto !important;
-        bottom: 0.75rem;
-      }
-      #testimonialsSlider.flickity-buttons-bottom-center .flickity-prev-next-button.previous {
-        left: calc(50% - 2.25rem);
-        right: auto;
-      }
-      #testimonialsSlider.flickity-buttons-bottom-center .flickity-prev-next-button.next {
-        left: calc(50% + 2.25rem);
-        right: auto;
-      }
-
-      /* Make buttons a bit smaller on compact screens */
-      #testimonialsSlider .flickity-prev-next-button {
-        width: 40px;
-        height: 40px;
-      }
-
       /* Testimonial Cards Responsive Fix */
       #testimonialsSlider .card-body {
         min-height: auto !important;
-        padding-bottom: 1.75rem !important; /* internal spacing; main space handled by slider padding */
+        padding-bottom: 2rem !important; /* Reduced from pb-9 for better flexibility */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -98,9 +72,9 @@
       
       /* Responsive adjustments for mobile */
       @media (max-width: 768px) {
-        #testimonialsSlider { padding-bottom: 4.5rem; }
-        #testimonialsSlider .card-body { padding-bottom: 1.25rem !important; }
-        #testimonialsSlider .flickity-prev-next-button { width: 36px; height: 36px; }
+        #testimonialsSlider .card-body {
+          padding-bottom: 1.5rem !important;
+        }
         
         #testimonialsSlider blockquote {
           margin-bottom: 1rem !important;
@@ -157,7 +131,6 @@
     
       </div>
     </nav>
-
     
 
     
@@ -170,7 +143,7 @@
 
             <!-- Heading -->
             <h1 class="font-sans-serif display-2 mb-4" data-translate="main-heading">
-              Creating <span class="text-primary">AI Agents</span> that do the real work
+              Creating <span class="text-primary">AI Agents</span> that do the real work<span class="text-underline-warning d-none d-xl-inline"><span data-typed='{"strings": ["Efficient", "Dynamic", "Responsive", "Innovative", "Next-gen", "Customized" ]}'></span></span><span class="text-underline-warning d-xl-none">Customized.</span>
             </h1>
 
           </div>
@@ -281,7 +254,7 @@
 
                         <!-- Icon -->
                         <div class="icon text-primary-light mx-auto mb-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M24,128A72.08,72.08,0,0,1,96,56H204.69L194.34,45.66a8,8,0,0,1,11.32-11.32l24,24a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L204.69,72H96a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0Zm200-8a8,8,0,0,0-8,8,56.06,56.06,0,0,1-56,56H51.31l10.35-10.34a8,8,0,0,0-11.32-11.32l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L51.31,200H160a72.08,72.08,0,0,0,72-72A8,8,0,0,0,224,120Z"></path></svg> </div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path></svg> </div>
                         <!-- Heading -->
                         <h1 class="font-sans-serif mb-4 mt-auto" data-translate="ai-text-chatbots-title">
                           AI Text Chatbots
@@ -886,7 +859,7 @@
                   </div>
                   <div class="card-body w-100 pb-0 text-center">
                     <div class="avatar avatar-xl">
-                      <img class="avatar-img rounded-circle border border-5 border-white" src="assets/img/avatars/little sunrays logo 2.jpg" alt="Customer Avatar">
+                      <img class="avatar-img rounded-circle border border-5 border-white" src="assets/img/avatars/Davatar.png" alt="Customer Avatar">
                     </div>
                   </div>
                   <div class="card-body w-100 pb-0 text-center">
@@ -1081,24 +1054,24 @@
       const translations = {
         en: {
           'lang-btn': 'Español',
-          'main-heading': 'Creating <span class="text-primary">AI Agents</span> that do the real work.',
-          'main-subtext': 'Helping businesses transition to AI agents and smart automations',
+          'main-heading': 'Creating <span class="text-primary">AI Agents</span> that do the real work <span class="text-underline-warning d-none d-xl-inline"><span data-typed=\'{"strings": ["Efficient", "Dynamic", "Responsive", "Innovative", "Next-gen", "Customized" ]}\'></span></span><span class="text-underline-warning d-xl-none">Customized</span>.',
+          'main-subtext': 'Helping Businesses Transition To AI Agents',
           'book-call-btn': 'Book a call',
           'our-services-btn': 'Our services',
           'what-ai-agents-btn': 'What are AI agents?',
-          'ai-voice-agents-title': 'Bilingual AI Voice Agents',
-          'ai-voice-agents-desc': 'Next-level AI agents for automated inbound and outbound calls.',
+          'ai-voice-agents-title': 'AI Voice Agents',
+          'ai-voice-agents-desc': 'Next-Level AI Agents for Automated Inbound and Outbound Calls.',
           'ai-voice-agents-link': 'Get started',
-          'ai-text-chatbots-title': 'Custom AI Automations',
-          'ai-text-chatbots-desc': 'Automate tasks, integrate any apps, and simplify work.',
+          'ai-text-chatbots-title': 'AI Text Chatbots',
+          'ai-text-chatbots-desc': 'AI Text Agents for your Website, Social Media, Emails, SMS',
           'ai-text-chatbots-link': 'Get started',
           'support-maintenance-title': 'Support and Maintenance',
           'support-maintenance-desc': 'Regular updates, performance boosts, and fixes to keep your agents running smoothly.',
           'support-maintenance-link': 'Get started',
           'what-are-ai-agents-title': 'What are AI Agents?',
-          'what-are-ai-agents-desc': 'AI agents are like intelligent digital employees, capable of executing tasks autonomously to optimize and grow your business. This includes voice agents that can handle calls and respond to inquiries, as well as automations that connect your applications and internal processes. These agents make your operations more efficient, scalable, and free from repetitive tasks, helping your business save time and increase productivity.',
-          'unsure-ai-title': 'Wondering how AI and automations can simplify your workflows?',
-          'unsure-ai-desc': 'Book a 30-minute consultation with our team at realworkai.com. Discover how custom automations can streamline repetitive tasks, reduce errors, and keep your operations running smoothly. AI voice agents can also handle calls and routine interactions, freeing up your time so you can focus on growing your business. Learn how companies like yours are leveraging these solutions to save time, improve efficiency, and drive growth.',
+          'what-are-ai-agents-desc': 'AI agents are like digital employees, capable of handling tasks autonomously to drive business growth. Examples include AI phone agents that can handle call inquiries, website chatbots for customer support, and email agents for sales and support. These agents interact with stakeholders, providing efficient and scalable solutions to enhance business operations.',
+          'unsure-ai-title': 'Unsure how AI could be used in your business?',
+          'unsure-ai-desc': 'Curious about how AI can enhance your business? Book a 30-minute consultation with our team at realworkai.com. In your session, we\'ll show you how our AI solutions have driven success for businesses like yours, providing valuable insights to help you make an informed decision on your AI journey.',
           'book-consultation-btn': 'Book a consultation',
           'impactful-benefits-title': 'Impactful Benefits for Your Success',
           'why-choose-us-title': 'Why Choose Us?',
@@ -1110,42 +1083,42 @@
           'rigorous-testing': 'Rigorous Testing and Validation',
           'leading-partnerships': 'Partners With Leading AI Platforms',
           'our-services-section-title': 'Our services',
-          'our-services-section-desc': 'We design and implement advanced AI Voice Agents and Custom Automations that deliver measurable results. Whether it’s saving your team hundreds of hours, reducing operating costs, or unlocking new revenue streams, our solutions are built to create lasting impact.',
-          'ai-text-chatbots-package': 'Automations',
-          'chatbots-setup-fee': 'Pricing: Upon Request',
-          'chatbots-price': '$1000+',
-          'chatbots-website-social': 'Streamline operations and eliminate repetitive tasks',
-          'chatbots-engagement': 'Reduce operating costs through advanced automations',
-          'chatbots-automations': 'Boost efficiency with tailored workflows',
+          'our-services-section-desc': 'Tailored AI Services Specifically Designed to Drive Sustainable Growth, Enhance Operational Efficiency, and Empower Your Business to Achieve Lasting Success in a Competitive Market.',
+          'ai-text-chatbots-package': 'AI Text Chatbots',
+          'chatbots-setup-fee': 'setup fee',
+          'chatbots-price': '$2,000',
+          'chatbots-website-social': 'Website/Social Media',
+          'chatbots-engagement': 'Next-Level Customer Engagement',
+          'chatbots-automations': 'Advanced Automations',
           'chatbots-testing': 'Rigorous Testing',
           'chatbots-support': '24/7 Priority Support',
-          'chatbots-integrations': 'App Integrations',
+          'chatbots-integrations': 'Social Media Integrations',
           'chatbots-ai-models': 'Latest AI Models',
           'ai-voice-agents-package': 'AI Voice Agents',
-          'voice-setup-fee': 'Pricing: Upon Request',
-          'voice-price': '$1000+',
-          'voice-calls': 'Inbound and Outbound Calls',
+          'voice-setup-fee': 'setup fee',
+          'voice-price': '$3,000',
+          'voice-calls': 'Inbound & Outbound Calls',
           'voice-automate': 'Fully automate your phone calls',
           'voice-automations': 'Advanced Automations',
-          'voice-quality': 'Human-like Quality',
+          'voice-quality': 'Human-Like Quality',
           'voice-support': '24/7 Priority Support',
           'voice-development': 'Weekly Development Calls',
           'voice-testing': 'Rigorous Testing',
           'voice-ai-models': 'Latest AI Models',
           'faq-title': 'Frequently Asked Questions',
-          'faq-1-q': 'What types of AI agents do you offer?',
-          'faq-1-a': 'We provide two types of AI solutions: AI voice agents and custom AI automations.',
+          'faq-1-q': 'What types of AI Agents do you offer?',
+          'faq-1-a': 'We provide two types of AI Agents. AI Voice Agents and AI Text Chatbots.',
           'faq-2-q': 'How do you ensure the quality of your projects?',
-          'faq-2-a': 'We have a minimum two-week testing period for our AI agents. Our packages include two to six weeks of testing.',
+          'faq-2-a': 'We have a minimum 2 week testing period for our AI Agents. Our packages range from 2 weeks of testing to 6 weeks of testing.',
           'faq-3-q': 'What is your development process like?',
           'faq-3-a': 'Our process involves initial consultation, planning, design, development, testing, and deployment. We follow agile methodologies to ensure flexibility and responsiveness.',
           'faq-4-q': 'How do you handle project timelines?',
           'faq-4-a': 'We create detailed project timelines with clear milestones. Our project deadlines are met by coordinating all phases of the development process.',
           'faq-5-q': 'How often will I receive updates on the project?',
-          'faq-5-a': 'We will send at least one email per week to update you on the status of the project during its development and testing phase.',
+          'faq-5-a': 'We will have at least 1 call per week to discuss the status of the project during its development and testing phase.',
           'testimonials-title': 'Perfect reviews from our real customers.',
           'testimonials-desc': 'Discover why businesses trust realworkai.com to revolutionize customer interactions.',
-          'testimonial-1': 'Realworkai.com has been a game-changer for our garage door installation business. The chatbots handle after-hours inquiries, schedule service calls, and provide quick estimates. Our leads have increased by 35%, and customers love the instant responses.',
+          'testimonial-1': 'realworkai.com has been a game changer for our garage door installation business. The chatbots handle after hours inquiries, schedule service calls, and provide quick estimates. Our leads have increased by 35%, and customers love the instant responses.',
           'testimonial-1-company': 'Altone Overhead Doors',
           'testimonial-2': 'AI voice agents have been a lifesaver for our daycare. They handle parent inquiries, schedule tours, and even provide updates on availability with a warm, professional tone. We\'ve saved so much time, and parents love the quick, reliable responses!',
           'testimonial-2-company': 'Little Sunrays Daycare',
@@ -1160,24 +1133,24 @@
         },
         es: {
           'lang-btn': 'English',
-          'main-heading': 'Creando <span class="text-primary">Asistentes de IA</span> que hacen el trabajo real.',
-          'main-subtext': 'Impulsando empresas con asistentes de IA y automatizaciones',
+          'main-heading': 'Creando <span class="text-primary">Agentes de IA</span> que hacen el trabajo real <span class="text-underline-warning d-none d-xl-inline"><span data-typed=\'{"strings": ["Eficientes", "Dinámicos", "Responsivos", "Innovadores", "De última generación", "Personalizados" ]}\'></span></span><span class="text-underline-warning d-xl-none">Personalizados</span>.',
+          'main-subtext': 'Ayudando a las Empresas a Transicionar a la IA',
           'book-call-btn': 'Programar una llamada',
           'our-services-btn': 'Nuestros servicios',
-          'what-ai-agents-btn': '¿Qué son los asistentes de IA?',
-          'ai-voice-agents-title': 'Asistentes de Voz Bilingües con IA',
-          'ai-voice-agents-desc': 'Asistentes de IA bilingües para llamadas entrantes y salientes automatizadas.',
+          'what-ai-agents-btn': '¿Qué son los agentes de IA?',
+          'ai-voice-agents-title': 'Agentes de Voz con IA',
+          'ai-voice-agents-desc': 'Agentes de IA de Próxima Generación para Llamadas Entrantes y Salientes Automatizadas.',
           'ai-voice-agents-link': 'Comenzar',
-          'ai-text-chatbots-title': 'Automatizaciones con IA',
-          'ai-text-chatbots-desc': 'Automatiza tareas, conecta tus apps y simplifica tu trabajo.',
+          'ai-text-chatbots-title': 'Chatbots de Texto con IA',
+          'ai-text-chatbots-desc': 'Agentes de Texto con IA para tu Sitio Web, Redes Sociales, Correos Electrónicos, SMS',
           'ai-text-chatbots-link': 'Comenzar',
           'support-maintenance-title': 'Soporte y Mantenimiento',
-          'support-maintenance-desc': 'Actualizaciones regulares, mejoras de rendimiento y correcciones para mantener tus asistentes funcionando sin problemas.',
+          'support-maintenance-desc': 'Actualizaciones regulares, mejoras de rendimiento y correcciones para mantener tus agentes funcionando sin problemas.',
           'support-maintenance-link': 'Comenzar',
-          'what-are-ai-agents-title': '¿Qué son los Asistentes de IA?',
-          'what-are-ai-agents-desc': 'Los asistentes de IA son como empleados digitales inteligentes, capaces de ejecutar tareas de forma autónoma para optimizar y hacer crecer tu negocio. Esto incluye asistentes de voz que pueden atender llamadas y responder consultas, así como automatizaciones que conectan tus aplicaciones y procesos internos. Estos asistentes permiten que tus operaciones sean más eficientes, escalables y libres de tareas repetitivas, ayudando a tu empresa a ahorrar tiempo y aumentar la productividad.',
-          'unsure-ai-title': '¿Te interesa descubrir cómo la IA y las automatizaciones pueden simplificar tus flujos de trabajo?',
-          'unsure-ai-desc': 'Agenda una consulta de 30 minutos con nuestro equipo en realworkai.com. Descubre cómo las automatizaciones personalizadas pueden agilizar tareas repetitivas, reducir errores y mantener tus operaciones funcionando sin problemas. Los asistentes de voz con IA también pueden encargarse de llamadas e interacciones rutinarias, liberando tu tiempo para que puedas enfocarte en el crecimiento de tu negocio. Conoce cómo empresas como la tuya están aprovechando estas soluciones para ahorrar tiempo, mejorar la eficiencia y potenciar su crecimiento.',
+          'what-are-ai-agents-title': '¿Qué son los Agentes de IA?',
+          'what-are-ai-agents-desc': 'Los agentes de IA son como empleados digitales, capaces de manejar tareas de forma autónoma para impulsar el crecimiento empresarial. Los ejemplos incluyen agentes telefónicos de IA que pueden manejar consultas de llamadas, chatbots de sitios web para soporte al cliente y agentes de correo electrónico para ventas y soporte. Estos agentes interactúan con las partes interesadas, proporcionando soluciones eficientes y escalables para mejorar las operaciones comerciales.',
+          'unsure-ai-title': '¿No estás seguro de cómo se podría usar la IA en tu negocio?',
+          'unsure-ai-desc': '¿Tienes curiosidad sobre cómo la IA puede mejorar tu negocio? Programa una consulta de 30 minutos con nuestro equipo en realworkai.com. En tu sesión, te mostraremos cómo nuestras soluciones de IA han impulsado el éxito para empresas como la tuya, proporcionando información valiosa para ayudarte a tomar una decisión informada en tu viaje de IA.',
           'book-consultation-btn': 'Programar una consulta',
           'impactful-benefits-title': 'Beneficios Impactantes para tu Éxito',
           'why-choose-us-title': '¿Por qué Elegirnos?',
@@ -1189,50 +1162,50 @@
           'rigorous-testing': 'Pruebas y Validación Rigurosas',
           'leading-partnerships': 'Socios con Plataformas de IA Líderes',
           'our-services-section-title': 'Nuestros servicios',
-          'our-services-section-desc': 'Diseñamos e implementamos asistentes de voz con IA y Automatizaciones Personalizadas que generan resultados medibles. Ya sea ahorrando cientos de horas de trabajo, reduciendo costos operativos o desbloqueando nuevas fuentes de ingresos, nuestras soluciones están hechas para crear un impacto duradero.',
-          'ai-text-chatbots-package': 'Automatizaciones',
-          'chatbots-setup-fee': 'Precio: A solicitud',
-          'chatbots-price': '$1000+',
-          'chatbots-website-social': 'Optimiza operaciones y elimina tareas repetitivas',
-          'chatbots-engagement': 'Reduce costos operativos con automatizaciones avanzadas',
-          'chatbots-automations': 'Incrementa la eficiencia con flujos de trabajo personalizados',
+          'our-services-section-desc': 'Servicios de IA Personalizados Específicamente Diseñados para Impulsar el Crecimiento Sostenible, Mejorar la Eficiencia Operacional y Empoderar a tu Negocio para Lograr un Éxito Duradero en un Mercado Competitivo.',
+          'ai-text-chatbots-package': 'Chatbots de Texto con IA',
+          'chatbots-setup-fee': 'tarifa de configuración',
+          'chatbots-price': '$2,000',
+          'chatbots-website-social': 'Sitio Web/Redes Sociales',
+          'chatbots-engagement': 'Compromiso del Cliente de Próximo Nivel',
+          'chatbots-automations': 'Automatizaciones Avanzadas',
           'chatbots-testing': 'Pruebas Rigurosas',
           'chatbots-support': 'Soporte Prioritario 24/7',
-          'chatbots-integrations': 'Integraciones con apps',
+          'chatbots-integrations': 'Integraciones de Redes Sociales',
           'chatbots-ai-models': 'Últimos Modelos de IA',
-          'ai-voice-agents-package': 'Asistentes de Voz con IA',
-          'voice-setup-fee': 'Precio: A solicitud',
-          'voice-price': '$1000+',
+          'ai-voice-agents-package': 'Agentes de Voz con IA',
+          'voice-setup-fee': 'tarifa de configuración',
+          'voice-price': '$3,000',
           'voice-calls': 'Llamadas Entrantes y Salientes',
           'voice-automate': 'Automatiza completamente tus llamadas telefónicas',
           'voice-automations': 'Automatizaciones Avanzadas',
-          'voice-quality': 'Calidad similar a la voz humana',
+          'voice-quality': 'Calidad Humana',
           'voice-support': 'Soporte Prioritario 24/7',
           'voice-development': 'Llamadas de Desarrollo Semanales',
           'voice-testing': 'Pruebas Rigurosas',
           'voice-ai-models': 'Últimos Modelos de IA',
           'faq-title': 'Preguntas Frecuentes',
-          'faq-1-q': '¿Qué tipos de Asistentes de IA ofrecen?',
-          'faq-1-a': 'Ofrecemos dos tipos de soluciones de IA: asistentes de voz con IA y automatizaciones personalizadas con IA.',
+          'faq-1-q': '¿Qué tipos de Agentes de IA ofrecen?',
+          'faq-1-a': 'Proporcionamos dos tipos de Agentes de IA. Agentes de Voz con IA y Chatbots de Texto con IA.',
           'faq-2-q': '¿Cómo garantizan la calidad de sus proyectos?',
-          'faq-2-a': 'Tenemos un período mínimo de pruebas de dos semanas para nuestros asistentes de IA. Nuestros paquetes van de dos a seis semanas de pruebas.',
+          'faq-2-a': 'Tenemos un período mínimo de pruebas de 2 semanas para nuestros Agentes de IA. Nuestros paquetes van de 2 semanas de pruebas a 6 semanas de pruebas.',
           'faq-3-q': '¿Cómo es su proceso de desarrollo?',
           'faq-3-a': 'Nuestro proceso involucra consulta inicial, planificación, diseño, desarrollo, pruebas y despliegue. Seguimos metodologías ágiles para garantizar flexibilidad y capacidad de respuesta.',
           'faq-4-q': '¿Cómo manejan los cronogramas de proyectos?',
           'faq-4-a': 'Creamos cronogramas de proyectos detallados con hitos claros. Nuestros plazos de proyecto se cumplen coordinando todas las fases del proceso de desarrollo.',
           'faq-5-q': '¿Con qué frecuencia recibiré actualizaciones sobre el proyecto?',
-          'faq-5-a': 'Enviaremos al menos un correo electrónico por semana para informarte sobre el estado del proyecto durante su fase de desarrollo y pruebas.',
+          'faq-5-a': 'Tendremos al menos 1 llamada por semana para discutir el estado del proyecto durante su fase de desarrollo y pruebas.',
           'testimonials-title': 'Reseñas perfectas de nuestros clientes reales.',
           'testimonials-desc': 'Descubre por qué las empresas confían en realworkai.com para revolucionar las interacciones con los clientes.',
           'testimonial-1': 'Realworkai.com ha sido un cambio radical para nuestro negocio de instalación de puertas de garaje. Los chatbots manejan consultas fuera del horario de oficina, programan llamadas de servicio y proporcionan estimaciones rápidas. Nuestros leads han aumentado un 35%, y a los clientes les encantan las respuestas instantáneas.',
           'testimonial-1-company': 'Altone Overhead Doors',
-          'testimonial-2': 'Los asistentes de voz con IA han sido un salvavidas para nuestra guardería. Manejan consultas de padres, programan tours e incluso proporcionan actualizaciones sobre disponibilidad con un tono cálido y profesional. ¡Hemos ahorrado mucho tiempo, y a los padres les encantan las respuestas rápidas y confiables!',
+          'testimonial-2': 'Los agentes de voz con IA han sido un salvavidas para nuestra guardería. Manejan consultas de padres, programan tours e incluso proporcionan actualizaciones sobre disponibilidad con un tono cálido y profesional. ¡Hemos ahorrado mucho tiempo, y a los padres les encantan las respuestas rápidas y confiables!',
           'testimonial-2-company': 'Little Sunrays Daycare',
-          'testimonial-3': 'Con los asistentes de voz con IA manejando la programación de citas, recordatorios y consultas comunes, nuestro personal puede enfocarse más en la atención al paciente.',
+          'testimonial-3': 'Con los agentes de voz con IA manejando la programación de citas, recordatorios y consultas comunes, nuestro personal puede enfocarse más en la atención al paciente.',
           'testimonial-3-company': 'Dental Plus+',
           'scalable-growth': 'Escalable para el crecimiento',
           'perfect-reviews': 'Reseñas perfectas de 5 estrellas',
-          'boosted-engagement': 'Mayor compromiso del cliente',
+          'boosted-engagement': 'Compromiso del Cliente Mejorado',
           'footer-tagline': 'Crecimiento Impulsado por IA.',
           'connect-title': 'Conectar',
           'footer-copyright': '© REALWORKAI 2023 - 2025, Todos los derechos reservados.'
