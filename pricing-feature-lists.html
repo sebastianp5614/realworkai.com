@@ -284,18 +284,19 @@
       const translations = {
         en: {
           'lang-btn': 'Español',
+          'page-title': 'Support package',
           'helping-subtext': 'Helping Businesses Transition To AI',
-          'main-heading': 'We\'ll support you all the way',
-          'main-description': 'At realworkai.com, we\'re committed to providing exceptional support to ensure your AI chatbots operate seamlessly and deliver the results your business deserves.',
+          'main-heading': 'We’ll Support You All the Way',
+          'main-description': 'At realworkai.com, we\'re committed to providing exceptional support to ensure your AI solutions operate seamlessly and deliver the results your business deserves.',
           'card-title': 'Support & Maintenance',
-          'card-description': 'Multiple packages to support your custom AI Agent.',
-          'monitoring': '24/7 Monitoring',
-          'priority-support': '24/7 Priority Support',
-          'update-calls': 'Monthly Update Calls',
-          'ai-upgrades': 'Latest AI Upgrades',
-          'data-analysis': 'Data Analysis',
-          'custom-dashboard': 'Custom Dashboard',
-          'price': '$500-$2,500/m',
+          'card-description': 'Multiple packages to support your custom AI solutions.',
+          'monitoring': '24/7 monitoring',
+          'priority-support': '24/7 priority support',
+          'update-calls': 'Monthly update calls',
+          'ai-upgrades': 'Latest AI upgrades',
+          'data-analysis': 'Data analysis',
+          'custom-dashboard': 'Custom dashboard',
+          'price': '$100-$2,500/m',
           'get-started-btn': 'Get started',
           'footer-tagline': 'Growth Powered by AI.',
           'connect-title': 'Connect',
@@ -303,18 +304,19 @@
         },
         es: {
           'lang-btn': 'English',
+          'page-title': 'Paquete de soporte',
           'helping-subtext': 'Ayudando a las Empresas a Transicionar a la IA',
-          'main-heading': 'Te apoyaremos en todo el camino',
-          'main-description': 'En realworkai.com, estamos comprometidos a brindar soporte excepcional para garantizar que tus chatbots de IA operen sin problemas y entreguen los resultados que tu negocio merece.',
+          'main-heading': 'Te Apoyaremos En Cada Paso',
+          'main-description': 'En realworkai.com, estamos comprometidos a brindar un soporte excepcional para garantizar que tus soluciones de IA funcionen sin problemas y entreguen los resultados que tu negocio merece.',
           'card-title': 'Soporte y Mantenimiento',
-          'card-description': 'Múltiples paquetes para apoyar tu Agente de IA personalizado.',
+          'card-description': 'Múltiples paquetes para apoyar tus soluciones de IA personalizadas.',
           'monitoring': 'Monitoreo 24/7',
-          'priority-support': 'Soporte Prioritario 24/7',
-          'update-calls': 'Llamadas de Actualización Mensuales',
-          'ai-upgrades': 'Últimas Actualizaciones de IA',
-          'data-analysis': 'Análisis de Datos',
-          'custom-dashboard': 'Panel Personalizado',
-          'price': '$500-$2,500/m',
+          'priority-support': 'Soporte prioritario 24/7',
+          'update-calls': 'Llamadas de actualización mensuales',
+          'ai-upgrades': 'Últimas actualizaciones de IA',
+          'data-analysis': 'Análisis de datos',
+          'custom-dashboard': 'Panel personalizado',
+          'price': '$100-$2,500/m',
           'get-started-btn': 'Comenzar',
           'footer-tagline': 'Crecimiento Impulsado por IA.',
           'connect-title': 'Conectar',
@@ -332,6 +334,9 @@
         
         // Update button text
         document.querySelector('#lang-btn span').textContent = langData['lang-btn'];
+        
+        // Update page title
+        document.title = langData['page-title'];
         
         // Update page content
         for (const [key, value] of Object.entries(langData)) {
